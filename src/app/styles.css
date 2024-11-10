@@ -81,23 +81,41 @@ a:hover {
 }
 
 /* Content Box */
+/* Content Box */
 .content-box {
   background-color: #fff;
+  color: black;
   border-radius: 12px;
   padding: 2.5rem;
   width: 600px;
-  max-width: 90%;  /* Makes the content-box responsive */
+  max-width: 90%; /* Makes the content-box responsive */
   margin-top: 2rem;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Add shadow for styling */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for styling */
   animation: slideUp 1s ease-out;
-  height: 400px; /* Fixed height */
+  height: auto; /* Allow height to adjust based on content */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Vertically center the content inside the box */
   align-items: center; /* Horizontally center the content inside the box */
   margin: 0 auto; /* Ensure it's horizontally centered */
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .content-box {
+    padding: 2rem; /* Reduce padding on smaller screens */
+    width: 85%; /* Reduce width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .content-box {
+    padding: 1.5rem; /* Further reduce padding on very small screens */
+    width: 95%; /* Make the box take up more space on very small screens */
+  }
+}
+
 
 /* Button Styles */
 .content-box button {
