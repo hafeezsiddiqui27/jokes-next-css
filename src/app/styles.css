@@ -1,0 +1,133 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background-color: black;
+  color: #fff;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full height of viewport */
+  overflow-x: hidden;
+  text-align: center; /* Align text to center for the whole body */
+  margin: 0; /* Remove any body margin */
+}
+
+/* Global Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s ease-out;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Link Styling */
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #ccc;
+  transform: translateY(-3px);
+}
+
+/* Container for content */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Content Box */
+.content-box {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2.5rem;
+  width: 600px;
+  max-width: 90%;  /* Makes the content-box responsive */
+  margin-top: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Add shadow for styling */
+  animation: slideUp 1s ease-out;
+  height: 400px; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content inside the box */
+  align-items: center; /* Horizontally center the content inside the box */
+  margin: 0 auto; /* Ensure it's horizontally centered */
+}
+
+/* Button Styles */
+.content-box button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.content-box button:hover {
+  background-color: #444;
+}
+
+.content-box button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Loading State */
+.loading {
+  font-size: 1.2rem;
+  color: #1111;
+  font-weight: bold;
+  animation: fadeIn 1s ease-out;
+}
+.cta{
+  color: antiquewhite;
+}

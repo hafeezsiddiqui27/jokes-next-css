@@ -1,0 +1,108 @@
+/* Footer */
+.footer {
+    width: 80%;
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    position: relative;  /* Ensures it's positioned relative to the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 50px; /* Adds space above the footer */
+    margin-bottom: 0; /* Ensure no bottom margin */
+    box-sizing: border-box;
+    padding-bottom: 20px; /* Ensures proper spacing at the bottom */
+}
+
+.quote {
+    font-size: 1.6em;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: white;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff9900;
+}
+
+.footer-info {
+    font-size: 1.2em;
+}
+
+.contact-link {
+    color: #ff9900;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .quote {
+        font-size: 1.3em;
+    }
+
+    .social-icons a {
+        font-size: 28px;
+    }
+
+    .contact-section {
+        padding: 30px 15px;
+    }
+
+    .contact-section h2 {
+        font-size: 2em;
+    }
+
+    .contact-section p {
+        font-size: 1.2em;
+    }
+}
+
+/* Make sure content doesn't overlap with the footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full screen height */
+}
+
+main {
+    flex-grow: 1; /* Allow content to take available space */
+}

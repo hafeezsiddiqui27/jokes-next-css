@@ -1,33 +1,14 @@
-// app/page.tsx
+import './styles.css';
+import Image from 'next/image';
 
-'use client';
+const Home: React.FC = () => (
+  <div className="container ">
+    <h1>Welcome to Laugh Haven 🎉</h1>
+   
+<p >If you love solving riddles, hearing funny jokes, and learning amazing facts, you&apos;re in the right place! We bring you fun and laughter every day with brain teasers, jokes, and surprising facts.</p>
+<p className='cta'>Click On The Navbar to get started</p>
+   
+  </div>
+);
 
-import { useState, useEffect } from 'react';
-import JokeDisplay from './components/JokeDisplay';
-import FetchButton from './components/FetchButton';
-
-interface Joke {
-  setup: string;
-  punchline: string;
-}
-
-export default function Home() {
-  const [joke, setJoke] = useState<Joke>({ setup: '', punchline: '' });
-
-  const fetchJoke = async () => {
-    const response = await fetch('https://official-joke-api.appspot.com/random_joke');
-    const data = await response.json();
-    setJoke(data);
-  };
-
-  useEffect(() => {
-    fetchJoke();
-  }, []);
-
-  return (
-    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '2rem' }}>
-      <JokeDisplay setup={joke.setup} punchline={joke.punchline} />
-      <FetchButton onClick={fetchJoke} />
-    </div>
-  );
-}
+export default Home;

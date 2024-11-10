@@ -1,0 +1,87 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;            /* Flexbox on body */
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  min-height: 100vh;        /* Full height of viewport */
+  margin: 0;                /* Remove default margin */
+  text-align: center;       /* Center text */
+}
+
+/* ContentBox Styles */
+.content-box {
+  background-color: #fff;
+  border: 2px solid blue;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;  /* Max width */
+  width: 90%;        /* Percentage-based width for responsiveness */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center;     /* Horizontally center content */
+  height: auto;           /* Make height flexible */
+  min-height: 250px;      /* Minimum height to avoid too small content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+/* Heading */
+.content-box h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Paragraph */
+.content-box p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Space below text */
+}
+
+/* Button Styles */
+.content-box button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.content-box button:hover {
+  background-color: #444;
+}
+
+.content-box button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-box {
+    width: 80%;  /* Make the box smaller on mobile screens */
+    padding: 15px;  /* Reduce padding */
+  }
+
+  .content-box h2 {
+    font-size: 1.5rem;  /* Adjust heading size on small screens */
+  }
+
+  .content-box p {
+    font-size: 1rem;    /* Adjust paragraph font size on small screens */
+  }
+
+  .content-box button {
+    font-size: 0.9rem;  /* Adjust button font size on small screens */
+    padding: 8px 16px;  /* Reduce padding for buttons */
+  }
+}

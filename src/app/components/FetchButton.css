@@ -1,0 +1,23 @@
+/* app/components/FetchButton.css */
+
+.fetch-button {
+  padding: 12px 24px;
+  border: 2px solid #fff;
+  background-color: black;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.fetch-button:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+.fetch-button:active {
+  background-color: #555;
+  transform: scale(1);
+}

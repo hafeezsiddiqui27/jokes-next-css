@@ -1,0 +1,110 @@
+/* Basic Styling */
+.navbar {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  position: fixed;  /* Fixing the navbar to the top */
+  top: 0;           /* Ensures it's at the top */
+  left: 0;
+  z-index: 1000;    /* Ensures it stays above other content */
+  padding: 10px 0;   /* Add padding for better spacing */
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px; /* Increased height for better spacing */
+  padding: 0 10px; /* Added some side padding */
+}
+
+/* Logo Styling */
+.logo a {
+  color: #fff;
+  font-size: 1.2rem; /* Slightly larger font size */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 20px; /* Increased gap between links */
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px; /* Padding for better clickable area */
+  font-size: 1rem; /* Font size for links */
+}
+
+.nav-links li a:hover {
+  color: #06B6D4;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: transform 0.3s;
+}
+
+/* Open Hamburger Animation */
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: row ;  /* Stack elements in column */
+    align-items: flex-start; /* Align items to start */
+    height: auto;
+    padding: 10px; /* Padding for better spacing */
+  }
+
+  .nav-links {
+    display: none; /* Hide on small screens */
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 60px; /* Ensure links appear below navbar */
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex; /* Show when hamburger is clicked */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger on small screens */
+  }
+}
+
+/* Ensure content below navbar doesn't overlap */
+body {
+  margin-top: 70px; /* Increased top margin to prevent overlap */
+}
