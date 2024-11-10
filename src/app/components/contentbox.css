@@ -13,7 +13,7 @@ body {
 /* ContentBox Styles */
 .content-box {
   background-color: #fff;
-  border: 2px solid blue;
+  border: 2px solid black;
   border-radius: 8px;
   padding: 20px;
   max-width: 500px;  /* Max width */

@@ -21,7 +21,7 @@
 // app/components/ContentBox.tsx
 
 import React from 'react';
-import './ContentBox.css';
+// import './ContentBox.css';
 
 interface ContentBoxProps {
   title: string;
