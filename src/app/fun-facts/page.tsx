@@ -1,12 +1,9 @@
-
-
 'use client';
 
 import { useState } from 'react';
 import ContentBox from '../components/Contentbox';
 import FetchButton from '../components/fetchButton';
 import '../styles.css';
-
 
 const FunFacts = () => {
   const [funFact, setFunFact] = useState<string | null>(null);
@@ -32,9 +29,13 @@ const FunFacts = () => {
       } else {
         setError('No fun fact available');
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error fetching fun fact:', error);
-      setError('Error: ' + (error.message || 'Something went wrong.'));
+      if (error instanceof Error) {
+        setError('Error: ' + error.message);  // Ensure we access the message correctly
+      } else {
+        setError('Error: Something went wrong.');
+      }
     } finally {
       setLoading(false);
     }
@@ -42,13 +43,13 @@ const FunFacts = () => {
 
   return (
     <div className="section">
-    <ContentBox
-      title="Fun Fact"
-      content={loading ? "Loading..." : error || funFact || "Click below to fetch a fun fact!"}
-    >
-      <FetchButton onClick={fetchFunFact} label='Get A New Fun Fact' />
+      <ContentBox
+        title="Fun Fact"
+        content={loading ? "Loading..." : error || funFact || "Click below to fetch a fun fact!"}
+      >
+        <FetchButton onClick={fetchFunFact} label="Get A New Fun Fact" />
       </ContentBox>
-      </div>
+    </div>
   );
 };
 

@@ -1,5 +1,4 @@
 import './styles.css';
-import Image from 'next/image';
 
 const Home: React.FC = () => (
   <div className="container ">
